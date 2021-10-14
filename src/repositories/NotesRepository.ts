@@ -27,6 +27,11 @@ class NotesRepository {
   list(): Note[] {
     return this.notes;
   }
+
+  findByTitle(title: string): Note {
+    const note = this.notes.find((note) => note.title === title);
+    return note;
+  }
 }
 
 export { NotesRepository };
