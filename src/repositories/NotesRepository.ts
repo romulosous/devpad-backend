@@ -23,6 +23,10 @@ class NotesRepository {
 
     this.notes.push(note);
   }
+
+  list(): Note[] {
+    return this.notes;
+  }
 }
 
 export { NotesRepository };

@@ -14,4 +14,10 @@ notesRoutes.post("/", (request, response) => {
   return response.status(201).send();
 });
 
+notesRoutes.get("/", (request, response) => {
+  const all = notesRepository.list();
+
+  return response.status(200).json(all);
+});
+
 export { notesRoutes };
